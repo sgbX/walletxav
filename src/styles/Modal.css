@@ -1,0 +1,67 @@
+/* Modal Design of the Error log of unsupported network*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.error-network {
+  background-color: #2e2e2e; 
+  color: #ffffff; 
+  border: 2px solid #000000; 
+  padding: 20px; 
+  margin: 20px auto; 
+  max-width: 400px; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+  font-family: 'Arial', sans-serif; 
+  text-align: center; 
+  position: relative; 
+  border-radius: 10px; 
+}
+
+.error-network h3 {
+  background-color: #1a1a1a; 
+  color: #ffffff; 
+  margin: -20px -20px 10px -20px; 
+  padding: 10px; 
+  text-align: left; 
+}
+
+.error-network .close-button {
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  background-color: #444444; 
+  border: 2px outset #ffffff; 
+  padding: 0 5px; 
+  cursor: pointer; 
+  color: #ffffff; 
+}
+
+.error-network .warning-icon {
+  display: block; 
+  margin: 0 auto 10px auto; 
+  font-size: 50px; 
+  color: #ffffff; 
+}
+
+.error-network .modal-message {
+  margin-bottom: 20px; 
+}
+
+.error-network .fix-button {
+  padding: 5px 15px; 
+  background-color: #444444; 
+  border: 2px outset #000000; 
+  cursor: not-allowed; 
+  font-family: 'Arial', sans-serif; 
+  pointer-events: none; 
+  color: #ffffff; 
+}

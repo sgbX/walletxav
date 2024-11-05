@@ -1,0 +1,50 @@
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.wallet-container {
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25); 
+  border-radius: 12px; 
+  position: relative;
+}
+
+.wallet-address,
+.wallet-balance {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.wallet-address.selected,
+.wallet-balance.selected {
+  background-color: #414141; 
+  color: #ffffff; 
+}
+
+.wallet-address.unselected,
+.wallet-balance.unselected {
+  background-color: #C3C3C3; 
+  color: #414141; 
+}
+
+.highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background-color: #414141;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.wallet-container.font-pp-neue-montreal-bold {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+}
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

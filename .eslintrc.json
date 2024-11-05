@@ -1,0 +1,162 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:putout/safe",
+        "prettier"
+    ],
+    "ignorePatterns": [
+        "env/*",
+        "src/locales/**/*.js",
+        "src/locales/**/en-US.po",
+        "node_modules",
+        "build",
+        "dist",
+        ".DS_Store",
+        ".env.*",
+        ".vscode/",
+        "package-lock.json",
+        "reactBabelRefreshPlugin.js"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "simple-import-sort", 
+        "unused-imports", 
+        "@typescript-eslint", 
+        "putout", 
+        "import"
+    ],
+    "rules": {
+        "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
+        "eol-last": [ "error", "always" ],
+        "function-call-argument-newline": [ "error", "consistent" ],
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error",
+        "linebreak-style": ["error", "unix"],
+        "no-duplicate-imports": "error",
+        "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 0 }],
+        "no-restricted-imports": [
+            "error",
+            {
+                "paths": [
+                    {
+                        "name": "@lingui/macro",
+                        "importNames": ["t"],
+                        "message": "Please use <Trans> instead of t."
+                    }
+                ],
+                "patterns": [
+                    {
+                        "group": ["**/dist"],
+                        "message": "Do not import from dist/ - this is an implementation detail, and breaks tree-shaking."
+                    },
+                    {
+                        "group": ["!styled-components/macro"]
+                    }
+                ]
+            }
+        ],
+        "no-trailing-spaces": "error",
+        // ⬇️ WARNING: subject to change
+        "object-curly-newline": [
+            "error",
+            {
+                "ImportDeclaration": { "multiline": true },
+                "ExportDeclaration": "always",
+                "ObjectExpression": { "multiline": true, "minProperties": 2 },
+                "ObjectPattern": { "multiline": true }
+            }
+        ],
+        "object-curly-spacing": ["error", "always"],
+        "object-property-newline": [
+            "error",
+            {
+                "allowAllPropertiesOnSameLine": true
+            }
+        ],
+        "object-shorthand": ["error", "always"],
+        "prefer-destructuring": [
+            "error",
+            {
+                "array": false,
+                "object": true
+            },
+            {
+                "enforceForRenamedProperties": false
+            }
+        ],
+        "putout/align-spaces": "off",
+        "putout/destructuring-as-function-argument": "warn",
+        "putout/multiple-properties-destructuring": [
+            "error",
+            {
+                "minProperties": 3
+            }
+        ],
+        "putout/objects-braces-inside-array": "off",
+        "putout/object-init": "off",
+        "putout/putout": ["error", {
+            "rules": {
+                "remove-console": "off",
+                "remove-useless-variables/destruct": "off",
+                "remove-unused-variables": "off"
+            }
+        }],
+        "quote-props": [ "error", "as-needed" ],
+        "react/jsx-closing-bracket-location": "error",
+        "react/jsx-first-prop-new-line": 2,
+        "react/jsx-sort-props": [
+            2,
+            {
+                "callbacksLast": true,
+                "shorthandFirst": true,
+                "ignoreCase": true,
+                "noSortAlphabetically": true,
+                "reservedFirst": ["key", "ref"]
+            }
+        ],
+        "react/jsx-max-props-per-line": [
+            1,
+            {
+                "when": "multiline"
+            }
+        ],
+        "react/react-in-jsx-scope": "off",
+        "remove-unused-variables": "off",
+        "semi": ["error", "always"],
+        "space-before-function-paren": ["error", "always"],
+        "simple-import-sort/imports": [
+            "error",
+            {
+                "groups": []
+            }
+        ],
+        "simple-import-sort/exports": "error",
+        "unused-imports/no-unused-imports": "error",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/ban-ts-ignore": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/indent": ["error", 4],
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/quotes": ["error", "backtick"]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
