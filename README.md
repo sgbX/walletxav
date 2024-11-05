@@ -1,39 +1,38 @@
-echo "# MetaMask Integration Project
+# 🌐 MetaMask Integration Project
+⚠️ Please Read
 
-## Description
+## 🚀 Installation
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
+```
+3. Start the development server:
+```bash
+npm run start:dev
+```
+The app will be served on port :3000
+
+## 📝 Description
 This project demonstrates MetaMask integration with various UI states for Web3 functionality, featuring an interactive 3D torus model.
 
-## UI States
+## 📋 Prerequisites
+- MetaMask wallet
+
+## 🔄 UI States
 1. Connect to MetaMask
 2. Initializing
 3. Reload
 4. Display Balance and Wallet Address
 5. USD Value Display
 
-## Interactive 3D Features
+## 🎮 Interactive 3D Features
 - Custom-built torus model created in Blender
 - Implemented using React Three Fiber
 - Interactive model that responds to user interaction
 - Smooth 3D animations and transitions
 
-## Prerequisites
-- MetaMask wallet
-
-## Installation
-1. Clone the repository
-2. Install dependencies:
-\`\`\`bash
-npm install
-\`\`\`
-
-## Running the Project
-To start the development server:
-\`\`\`bash
-npm run start:dev
-\`\`\`
-The app will be served on port :3000
-
-## Features
+## ✨ Features
 - MetaMask connection
 - Support for Ethereum and Matic networks
 - Real-time balance updates
@@ -42,7 +41,7 @@ The app will be served on port :3000
 - Interactive 3D torus visualization
 - Custom Blender model integration
 
-## Technologies Used
+## 🛠️ Technologies Used
 - React-TypeScript
 - React Three Fiber
 - Three.js
@@ -50,10 +49,9 @@ The app will be served on port :3000
 - MetaMask Web3
 - CoinGecko API
 
-## Development Notes
+## 📘 Development Notes
 - Built with React-TypeScript
 - No auto-connection to MetaMask
 - Supports multiple networks
 - Real-time balance updates
 - Custom 3D model integration with interactive features
-" > README.md
